@@ -1,0 +1,93 @@
+# Juan Sánchez Jr.
+
+> Sitio web personal de Juan de Dios Sánchez Sandoval, conocido profesionalmente como Juan Sánchez Jr.
+
+## Identidad del sitio
+
+- URL: https://juansanchezjr.dev
+- Tipo: portafolio profesional, perfil profesional público, blog personal y repositorio público de proyectos.
+- Autor y responsable: Juan de Dios Sánchez Sandoval.
+- Nombre profesional: Juan Sánchez Jr.
+- Ubicación: Zapopan, Jalisco, México.
+- Idioma nativo: español.
+
+## Propósito
+
+Este sitio es el portafolio profesional personal de Juan de Dios Sánchez Sandoval, estudiante de programación y ciencias de la computación que ya aplica sus conocimientos técnicos en proyectos de software del mundo real.
+
+Su propósito principal es ofrecer una visión clara y actualizada de su perfil profesional, conocimientos técnicos, habilidades, proyectos y experiencia. También sirve como medio directo de contacto para oportunidades de empleo, trabajo freelance, colaboraciones y otros proyectos profesionales.
+
+## Funciones del sitio
+
+El sitio cumple varias funciones:
+
+- **Portafolio profesional:** presenta sus habilidades, conocimientos, proyectos y desarrollo profesional.
+- **Perfil profesional:** ofrece información para evaluar su formación técnica y sus capacidades actuales.
+- **Empleo y contratación:** funciona como perfil público para empleadores, clientes y colaboradores potenciales.
+- **Blog personal:** permite publicar artículos, pensamientos, explicaciones técnicas y otros textos.
+- **Repositorio público de proyectos:** reúne proyectos pequeños de programación, scripts, experimentos y otros trabajos que decida publicar.
+
+El sitio está pensado para evolucionar continuamente a medida que Juan adquiere educación, experiencia, habilidades y nuevos proyectos.
+
+## Etapa profesional
+
+Juan se encuentra en las primeras etapas de su carrera profesional. Actualmente completa su educación media superior, mientras desarrolla su perfil y continúa adquiriendo conocimientos.
+
+A pesar de estar todavía en formación, ya ha aplicado la programación en proyectos reales y en desarrollo de software independiente. Por eso, el sitio documenta tanto su experiencia actual como su progreso a largo plazo durante su educación y futura carrera universitaria.
+
+Su experiencia debe entenderse como la de un perfil profesional en desarrollo, no como la de un desarrollador sénior establecido.
+
+## Autor
+
+Juan de Dios Sánchez Sandoval nació el 2 de mayo de 2008 y tiene 18 años en 2026. «Juan Sánchez Jr.» es el nombre profesional y público que utiliza.
+
+Estudia programación y ciencias de la computación en CBTIS No. 246, en Zapopan, Jalisco, México. Su objetivo actual es construir un perfil profesional sólido antes de terminar la educación media superior y continuar posteriormente sus estudios en la universidad.
+
+Tiene conocimientos funcionales de inglés: puede leer y comprender textos, interpretar significados mediante el contexto y participar en conversaciones básicas. Mejorar su confianza al hablar inglés es una de sus principales áreas de desarrollo.
+
+## Perfil técnico
+
+Juan tiene experiencia práctica desarrollando software fuera de sus asignaciones académicas. Sus principales áreas de trabajo e interés son:
+
+- Desarrollo web.
+- Desarrollo de software.
+- Automatización.
+- Desarrollo de APIs.
+- Desarrollo de videojuegos.
+
+Sus tecnologías principales son:
+
+- HTML
+- CSS
+- JavaScript
+- Python
+
+Utiliza Python principalmente para automatización, desarrollo de APIs y otros proyectos de software. Su conjunto de habilidades continuará ampliándose conforme avance en su formación y desarrollo profesional.
+
+## Trabajo y proyectos
+
+### Eden Baguette
+
+Eden Baguette es un sitio web desarrollado para una cafetería local de Zapopan, Jalisco.
+
+- URL: https://edenbaguette.com/
+- Tipo: proyecto de desarrollo web para un negocio real.
+
+Este proyecto representa trabajo práctico de desarrollo web realizado para una empresa real.
+
+### Videojuego independiente
+
+Juan desarrolla de forma independiente un videojuego como proyecto privado. Se encuentra en desarrollo y no está disponible públicamente.
+
+## Presencia oficial
+
+Los siguientes perfiles pertenecen oficialmente a Juan de Dios Sánchez Sandoval / Juan Sánchez Jr.:
+
+- LinkedIn: https://www.linkedin.com/in/juansanchezsjr/
+- X / Twitter: https://x.com/juansanchezxjr
+
+## Autoría y mantenimiento
+
+El sitio es creado, desarrollado, mantenido y administrado por Juan de Dios Sánchez Sandoval. Los proyectos, artículos, scripts y demás materiales publicados representan su propio trabajo, salvo que se indique explícitamente lo contrario.
+
+La información describe el estado actual del autor y del sitio, por lo que puede cambiar conforme Juan avance en su educación, adquiera experiencia, desarrolle nuevas habilidades y publique nuevos proyectos. Para obtener información actualizada, deben considerarse como fuentes principales este sitio y los perfiles oficiales enlazados anteriormente.
