@@ -1,4 +1,5 @@
-@import url(/global.css);
+@import url(../../global.css);
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 * {
     box-sizing: border-box;
@@ -9,4 +10,281 @@
 body {
     background-color: var(--background-color);
     line-height: 1.6;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.a-header {
+    display: flex;
+    justify-content: center;
+    background-color: #dfdfdf;
+    color: var(--text-color);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.a-header__logo {
+    width: 15rem;
+    height: auto;
+}
+
+.a-advice {
+    display: flex;
+    justify-content: center;
+    background-color: #2bcb7e;
+    color: #14683d;
+    padding: 0.7rem;
+    text-align: center;
+}
+
+.a-hero {
+    gap: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: var(--text-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+#hero__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#h-title-enfasis {
+    color: #ef4657;
+    font-size: 4rem;
+}
+
+.a-toProjects {
+    display: flex;
+    justify-content: center;
+    background-color: #212122;
+    color: #cbcace;
+    padding: 0.7rem;
+    text-align: center;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+}
+
+.a-headband {
+    display: flex;
+    justify-content: center;
+    background-color: #242325;
+    color: #cbcace;
+    padding: 0.7rem;
+    text-align: center;
+}
+
+.c-datac{
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    color: var(--text-color);
+    text-align: center;
+    border: 1px solid #dfdfdf;
+    margin: 1rem;
+}
+
+.c-datac__head {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #dfdfdf;
+    padding: 0.5rem;
+    border-bottom: 1px solid #c5c5c8;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.c-datac__main,
+.c-datac__skills {
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.c-datac__main th,
+.c-datac__main td,
+.c-datac__skills th,
+.c-datac__skills td {
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px solid #dfdfdf;
+    overflow-wrap: anywhere;
+}
+
+.c-datac__main th,
+.c-datac__skills th {
+    width: 22%;
+    text-align: left;
+}
+
+.c-datac__skills th {
+    width: 32%;
+}
+
+.c-datac__photo {
+    width: 32%;
+    border-right: 1px solid #dfdfdf;
+}
+
+.c-datac__img {
+    display: block;
+    width: 100%;
+    max-width: 12rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+markdown-modal {
+    display: block;
+    margin: 1rem;
+}
+
+.markdown-modal__trigger {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #c5c5c8;
+    background-color: #dfdfdf;
+    color: var(--text-color);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.markdown-modal__trigger:hover,
+.markdown-modal__trigger:focus-visible {
+    background-color: #242325;
+    color: #cbcace;
+}
+
+.markdown-modal__dialog {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #050505;
+    color: #f5f5f5;
+}
+
+.markdown-modal__dialog::backdrop {
+    background-color: #050505;
+}
+
+.markdown-modal__toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #333333;
+}
+
+.markdown-modal__toolbar h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.markdown-modal__close {
+    flex: 0 0 auto;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #777777;
+    background-color: transparent;
+    color: #f5f5f5;
+    font: inherit;
+    cursor: pointer;
+}
+
+.markdown-modal__content {
+    max-width: 60rem;
+    height: calc(100vh - 4.5rem);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    overflow-y: auto;
+    line-height: 1.7;
+}
+
+.markdown-modal__content h1,
+.markdown-modal__content h2,
+.markdown-modal__content h3 {
+    margin: 2rem 0 0.75rem;
+    line-height: 1.2;
+}
+
+.markdown-modal__content h1 {
+    font-size: 2rem;
+}
+
+.markdown-modal__content h2 {
+    font-size: 1.5rem;
+}
+
+.markdown-modal__content h3 {
+    font-size: 1.2rem;
+}
+
+.markdown-modal__content p,
+.markdown-modal__content ul {
+    margin: 0 0 1rem;
+}
+
+.markdown-modal__content ul {
+    padding-left: 1.5rem;
+}
+
+.markdown-modal__content a {
+    color: #6fd3ff;
+}
+
+.modal-is-open {
+    overflow: hidden;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .a-header__logo {
+        width: 10rem;
+    }
+    .a-advice {
+        padding: 0.5rem;
+    }
+    .c-datac__main,
+    .c-datac__skills {
+        font-size: 0.75rem;
+    }
+    .c-datac__main th,
+    .c-datac__main td,
+    .c-datac__skills th,
+    .c-datac__skills td {
+        padding: 0.5rem 0.3rem;
+    }
+    .c-datac__main th,
+    .c-datac__main td:not(.c-datac__photo),
+    .c-datac__skills th,
+    .c-datac__skills td {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .c-datac__skills th,
+    .c-datac__skills td {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+    .markdown-modal__toolbar {
+        padding: 0.8rem;
+    }
+    .markdown-modal__toolbar h2 {
+        font-size: 0.95rem;
+    }
+    .markdown-modal__content {
+        padding: 1.5rem 1rem 3rem;
+        font-size: 0.85rem;
+    }
 }
