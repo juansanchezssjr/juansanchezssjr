@@ -14,9 +14,9 @@ class MarkdownModal extends HTMLElement {
 			<dialog class="markdown-modal__dialog" aria-labelledby="markdown-modal-title">
 				<div class="markdown-modal__toolbar">
 					<h2 id="markdown-modal-title">${this.title}</h2>
-					<button class="markdown-modal__close" type="button" aria-label="Cerrar lectura">Esc</button>
+					<button class="markdown-modal__close" type="button" aria-label="Cerrar lectura" title="Cerrar lectura">&times;</button>
 				</div>
-				<article class="markdown-modal__content" aria-live="polite">
+				<article class="markdown-modal__content" aria-busy="true" aria-live="polite">
 					<p>Cargando contenido...</p>
 				</article>
 			</dialog>
@@ -43,6 +43,7 @@ class MarkdownModal extends HTMLElement {
 
 	async open() {
 		document.body.classList.add('modal-is-open');
+		this.content.setAttribute('aria-busy', 'true');
 		this.dialog.showModal();
 
 		try {
@@ -54,6 +55,8 @@ class MarkdownModal extends HTMLElement {
 		} catch (error) {
 			this.content.innerHTML = '<p>No se pudo cargar la lectura.</p>';
 			console.error(error);
+		} finally {
+			this.content.setAttribute('aria-busy', 'false');
 		}
 	}
 

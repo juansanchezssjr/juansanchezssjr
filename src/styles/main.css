@@ -11,6 +11,8 @@ body {
     background-color: var(--background-color);
     line-height: 1.6;
     font-family: "JetBrains Mono", monospace;
+    min-width: 0;
+    overflow-x: hidden;
 }
 
 .a-header {
@@ -18,12 +20,12 @@ body {
     justify-content: center;
     background-color: #dfdfdf;
     color: var(--text-color);
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     text-align: center;
 }
 
 .a-header__logo {
-    width: 15rem;
+    width: min(15rem, 70vw);
     height: auto;
 }
 
@@ -32,7 +34,7 @@ body {
     justify-content: center;
     background-color: #2bcb7e;
     color: #14683d;
-    padding: 0.7rem;
+    padding: 0.7rem clamp(1rem, 4vw, 2rem);
     text-align: center;
 }
 
@@ -43,26 +45,27 @@ body {
     justify-content: center;
     background-color: #f5f5f5;
     color: var(--text-color);
-    padding: 2rem;
+    padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
     text-align: center;
 }
 
 #hero__title {
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
     font-weight: bold;
 }
 
 #h-title-enfasis {
     color: #ef4657;
-    font-size: 4rem;
+    font-size: clamp(1.75rem, 11vw, 4rem);
+    line-height: 1.1;
 }
 
 .a-toProjects {
-    display: flex;
-    justify-content: center;
+    align-self: center;
+    width: min(100%, 18rem);
     background-color: #212122;
     color: #cbcace;
-    padding: 0.7rem;
+    padding: 0.7rem 1rem;
     text-align: center;
     border: none;
     border-radius: 2rem;
@@ -74,18 +77,19 @@ body {
     justify-content: center;
     background-color: #242325;
     color: #cbcace;
-    padding: 0.7rem;
+    padding: 0.7rem clamp(1rem, 4vw, 2rem);
     text-align: center;
 }
 
-.c-datac{
+.c-datac {
     display: flex;
     flex-direction: column;
     background-color: #f5f5f5;
     color: var(--text-color);
     text-align: center;
     border: 1px solid #dfdfdf;
-    margin: 1rem;
+    width: min(calc(100% - 2rem), 72rem);
+    margin: clamp(0.75rem, 2vw, 1.5rem) auto;
 }
 
 .c-datac__head {
@@ -100,6 +104,7 @@ body {
 
 .c-datac__main,
 .c-datac__skills {
+    min-width: 0;
     table-layout: fixed;
     border-collapse: collapse;
     font-size: 0.9rem;
@@ -113,6 +118,7 @@ body {
     padding: 0.7rem 0.5rem;
     border-bottom: 1px solid #dfdfdf;
     overflow-wrap: anywhere;
+    word-break: normal;
 }
 
 .c-datac__main th,
@@ -140,12 +146,13 @@ body {
 
 markdown-modal {
     display: block;
-    margin: 1rem;
+    width: min(calc(100% - 2rem), 72rem);
+    margin: clamp(0.75rem, 2vw, 1.5rem) auto;
 }
 
 .markdown-modal__trigger {
     width: 100%;
-    padding: 1rem;
+    padding: clamp(0.8rem, 2vw, 1rem);
     border: 1px solid #c5c5c8;
     background-color: #dfdfdf;
     color: var(--text-color);
@@ -156,76 +163,105 @@ markdown-modal {
 
 .markdown-modal__trigger:hover,
 .markdown-modal__trigger:focus-visible {
-    background-color: #242325;
-    color: #cbcace;
+    background-color: #ffffff;
+    border-color: #242325;
+    color: #242325;
 }
 
 .markdown-modal__dialog {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    inset: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     max-width: none;
     max-height: none;
     margin: 0;
     padding: 0;
-    border: 0;
-    background-color: #050505;
-    color: #f5f5f5;
+    border: 1px solid #c5c5c8;
+    background-color: #f8f8f8;
+    color: var(--text-color);
+    box-shadow: 0 1rem 3rem rgb(44 39 49 / 20%);
+}
+
+.markdown-modal__dialog:not([open]) {
+    display: none;
 }
 
 .markdown-modal__dialog::backdrop {
-    background-color: #050505;
+    background-color: rgb(44 39 49 / 45%);
 }
 
 .markdown-modal__toolbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid #333333;
+    gap: clamp(0.5rem, 3vw, 1.5rem);
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 4vw, 1.5rem);
+    border-bottom: 1px solid #d7d7da;
+    background-color: #ffffff;
 }
 
 .markdown-modal__toolbar h2 {
     margin: 0;
-    font-size: 1.2rem;
+    min-width: 0;
+    font-size: clamp(0.95rem, 3vw, 1.2rem);
+    overflow-wrap: anywhere;
 }
 
 .markdown-modal__close {
     flex: 0 0 auto;
-    padding: 0.5rem 0.8rem;
-    border: 1px solid #777777;
-    background-color: transparent;
-    color: #f5f5f5;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: 1px solid #c5c5c8;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: var(--text-color);
+    line-height: 1;
     font: inherit;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
+.markdown-modal__close:hover,
+.markdown-modal__close:focus-visible {
+    background-color: #242325;
+    border-color: #242325;
+    color: #ffffff;
+}
+
 .markdown-modal__content {
+    width: min(100%, 60rem);
+    min-height: 0;
     max-width: 60rem;
-    height: calc(100vh - 4.5rem);
+    height: auto;
     margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
+    padding: clamp(1.5rem, 5vw, 3.5rem) clamp(1rem, 5vw, 2rem) 4rem;
     overflow-y: auto;
-    line-height: 1.7;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    line-height: 1.75;
+    overflow-wrap: anywhere;
 }
 
 .markdown-modal__content h1,
 .markdown-modal__content h2,
 .markdown-modal__content h3 {
-    margin: 2rem 0 0.75rem;
+    margin: clamp(1.5rem, 4vw, 2.5rem) 0 0.75rem;
     line-height: 1.2;
 }
 
 .markdown-modal__content h1 {
-    font-size: 2rem;
+    margin-top: 0;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
 }
 
 .markdown-modal__content h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
 }
 
 .markdown-modal__content h3 {
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
 }
 
 .markdown-modal__content p,
@@ -238,7 +274,8 @@ markdown-modal {
 }
 
 .markdown-modal__content a {
-    color: #6fd3ff;
+    color: #b5223d;
+    overflow-wrap: anywhere;
 }
 
 .modal-is-open {
@@ -255,27 +292,13 @@ markdown-modal {
     }
     .c-datac__main,
     .c-datac__skills {
-        font-size: 0.75rem;
+        font-size: clamp(0.72rem, 2.2vw, 0.9rem);
     }
     .c-datac__main th,
     .c-datac__main td,
     .c-datac__skills th,
     .c-datac__skills td {
         padding: 0.5rem 0.3rem;
-    }
-    .c-datac__main th,
-    .c-datac__main td:not(.c-datac__photo),
-    .c-datac__skills th,
-    .c-datac__skills td {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .c-datac__skills th,
-    .c-datac__skills td {
-        white-space: normal;
-        overflow: visible;
-        text-overflow: clip;
     }
     .markdown-modal__toolbar {
         padding: 0.8rem;
@@ -286,5 +309,39 @@ markdown-modal {
     .markdown-modal__content {
         padding: 1.5rem 1rem 3rem;
         font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .c-datac {
+        width: calc(100% - 1rem);
+    }
+
+    .c-datac__main th,
+    .c-datac__skills th {
+        width: 35%;
+    }
+
+    .c-datac__photo {
+        width: 25%;
+    }
+
+    .c-datac__img {
+        max-width: 5rem;
+    }
+
+    .c-datac__main th,
+    .c-datac__main td,
+    .c-datac__skills th,
+    .c-datac__skills td {
+        padding: 0.45rem 0.3rem;
+    }
+
+    markdown-modal {
+        width: calc(100% - 1rem);
+    }
+
+    .markdown-modal__toolbar {
+        gap: 0.5rem;
     }
 }
